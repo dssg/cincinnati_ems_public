@@ -1,0 +1,209 @@
+features:
+    - name: acs_income
+      type: float
+      deps: [geoid, time_year]
+      incl: True
+
+    - name: acs_age
+      type: float
+      deps: [geoid, time_year]
+      incl: True
+
+    - name: acs_no_insurance
+      type: float
+      deps: [geoid, time_year]
+      incl: True
+
+    - name: acs_edu
+      type: float
+      deps: [geoid, time_year]
+      incl: True
+
+    - name: acs_white
+      type: float
+      deps: [geoid, time_year]
+      incl: True
+
+    - name: acs_black
+      type: float
+      deps: [geoid, time_year]
+      incl: True
+
+    - name: weekday
+      type: cat
+      deps: [time_created]
+      incl: True
+
+    - name: common_weather_tmax
+      type: float
+      incl: False
+
+    - name: time_year
+      type: cat
+      incl: True
+
+    - name: m_required
+      type: bool
+      incl: True
+
+    - name: trns_to_hosp
+      type: bool
+      incl: True
+
+    - name: code_type
+      type: cat
+      incl: True
+
+    - name: time_of_day
+      type: cat
+      deps: [time_hour]
+      incl: True
+
+    - name: incident_duration
+      type: float
+      deps: [time_created, time_closed]
+      incl: True
+
+    - name: trns_or_refused
+      type: bool
+      deps: [comments, trns_to_hosp]
+      incl: False
+
+    - name: within_1day_full_moon
+      type: bool
+      deps: [time_day, time_year, time_month]
+      incl: True
+
+    - name: common_weather
+      type: float
+      deps: [time_created]
+      incl: True
+
+    - name: weather_event
+      type: float
+      deps: [time_created]
+      incl: True
+
+    - name: pt_age
+      type: float
+      incl: True
+
+    - name: pt_gender
+      type: cat
+      incl: True
+
+    - name: pt_race
+      type: cat
+      incl: True
+
+    - name: pt_postcode
+      type: float
+      incl: True
+
+    - name: station_name
+      type: cat
+      incl: True
+
+    - name: code_level
+      type: cat
+      incl: True
+
+    - name: dispatch_type
+      type: cat
+      incl: True
+
+    - name: time_month
+      type: cat
+      incl: True
+
+    - name: time_day
+      type: cat
+      incl: True
+
+    - name: call_type
+      type: cat
+      incl: True
+
+    - name: call_source
+      type: cat
+      incl: True
+
+    - name: operator_agency
+      type: cat
+      incl: True
+
+    - name: operator_name
+      type: cat
+      incl: True
+
+    - name: temp_above
+      type: bool
+      deps: [time_created]
+      incl: True
+ 
+    - name: temp_below
+      type: bool
+      deps: [time_created]
+      incl: True
+
+    - name: operator_experience
+      type: float
+      deps: [operator_name, time_created]
+      incl: True
+
+    - name: time_weekend
+      type: bool
+      deps: [time_year, time_month, time_day]
+      incl: True
+
+    - name: repeated_loc_24h
+      type: float
+      incl: True
+    
+    - name: building_type
+      type: cat
+      deps: [call_type]
+      incl: True
+
+    - name: relative_max_temperature
+      type: float
+      incl: True 
+
+    - name: relative_min_temperature
+      type: float
+      incl: True  
+
+    - name: frac_trans_1week
+      type: float
+      incl: True 
+
+    - name: frac_trans_1day
+      type: float
+      incl: True 
+
+    - name: total_transports_1month
+      type: float
+      incl: True  
+
+    - name: total_transports_1day_bystation
+      type: float
+      incl: True 
+
+    - name: total_transports_lastweek_bystation
+      type: float
+      incl: True 
+
+    - name: total_transports_lastweek_bycode
+      type: float
+      incl: True
+
+    - name: total_transports_lasthour
+      type: float
+      incl: True 
+
+    - name: is_holiday
+      type: bool
+      deps: [time_year, time_month, time_day]
+      incl: True
+
+pk: incident

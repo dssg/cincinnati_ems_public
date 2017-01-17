@@ -1,0 +1,108 @@
+features:
+    - name: acs_income
+      type: float
+      deps: [geoid, time_year]
+      incl: False
+
+    - name: acs_age
+      type: float
+      deps: [geoid, time_year]
+      incl: False
+
+    - name: acs_no_insurance
+      type: float
+      deps: [geoid, time_year]
+      incl: False
+
+    - name: acs_edu
+      type: float
+      deps: [geoid, time_year]
+      incl: False
+
+    - name: acs_white
+      type: float
+      deps: [geoid, time_year]
+      incl: False
+
+    - name: acs_black
+      type: float
+      deps: [geoid, time_year]
+      incl: False
+
+    - name: weekday
+      type: cat
+      deps: [time_created]
+      incl: True
+
+    - name: common_weather_tmax
+      type: float
+      incl: False
+
+    - name: time_year
+      type: cat
+      incl: True
+
+    - name: m_required
+      type: float
+      incl: True
+
+    - name: trns_to_hosp
+      type: float
+      incl: True
+
+    - name: time_of_day
+      type: cat
+      deps: [time_hour]
+      incl: True
+
+    - name: within_1day_full_moon
+      type: bool
+      deps: [time_day, time_year, time_month]
+      incl: True 
+
+    - name: common_weather
+      type: float
+      deps: [time_created]
+      incl: True
+
+    - name: weather_event
+      type: float
+      deps: [time_created]
+      incl: True
+
+    - name: station_name
+      type: cat
+      incl: True
+
+    - name: time_month
+      type: cat
+      incl: True 
+
+    - name: time_day
+      type: cat
+      incl: True 
+
+    - name: temp_above
+      type: bool
+      deps: [time_created]
+      incl: True
+ 
+    - name: temp_below
+      type: bool
+      deps: [time_created]
+      incl: True
+
+    - name: time_weekend
+      type: bool
+      deps: [time_year, time_month, time_day]
+      incl: True 
+
+    - name: relative_max_temperature
+      type: float
+      incl: True
+
+    - name: relative_min_temperature
+      type: float
+      incl: True
+
+pk: pk_demand

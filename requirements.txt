@@ -1,0 +1,14 @@
+sqlalchemy==1.0.14
+luigi==2.2.0
+psycopg2==2.6.2
+pylab==0.1.3
+numpy==1.11.1
+scipy==0.18.0
+matplotlib==1.5.1
+statsmodels==0.6.1
+seaborn==0.7.1
+pandas==0.18.1
+pyyaml==3.11
+csvtools==0.5.1
+csvkit==0.9.1
+scikit-learn==0.17.1

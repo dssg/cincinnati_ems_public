@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  luigi-server:
+    #restart: always
+    build: luigi-server
+    ports:
+      - "8082:8082"
+
+  luigi-worker:
+    build:
+      context: luigi-worker
+      args:
+        WORKER_USER: ${WORKER_USER}
+        WORKER_UID:  ${WORKER_UID}
+        GITHUB_REPO: ${GITHUB_REPO}
+        GITHUB_USER: ${GITHUB_USER}
+    #command: make all
+    env_file: .env
+
+  postgres:
+    image: postgres:9.5.4
+    env_file: .env

@@ -1,0 +1,4 @@
+export PGHOST=some.host.com
+export PGDATABASE=database
+export PGUSER=user
+export PGPASSWORD=pwd
